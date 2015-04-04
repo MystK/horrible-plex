@@ -1,0 +1,35 @@
+{
+  "name": "Tomahawk",
+  "version": "1.0.0",
+  "description": "anime utility",
+  "main": "/frontend/nw.html",
+  "dependencies": {
+    "koa": "^0.18.1",
+    "koa-router": "^4.2.0",
+    "nw": "^0.12.0"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.8.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp-supervisor": "^0.1.2",
+    "mocha": "^2.2.1",
+    "supertest": "^0.15.0",
+    "supervisor": "^0.6.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "nw",
+    "backend": "backend/server"
+  },
+  "window": {
+    "toolbar": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://MystK@bitbucket.org/MystK/tomahawk.git"
+  },
+  "author": "Antoine Pham",
+  "license": "ISC"
+}

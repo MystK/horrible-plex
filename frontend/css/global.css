@@ -1,0 +1,10 @@
+body {
+	min-height: 2000px;
+	padding-top: 70px;
+}
+table {
+	width: 100%;
+}
+td {
+	vertical-align: top;
+}
