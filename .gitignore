@@ -2,3 +2,4 @@ node_modules
 _old
 scratch
 *.dat
+*.suo
