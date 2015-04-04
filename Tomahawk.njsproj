@@ -19,10 +19,11 @@
     <Content Include=".gitignore" />
     <Compile Include="gulpfile.js" />
     <Content Include="package.json" />
-    <Compile Include="scratch.js" />
+    <Compile Include="scratch\scratchpad.js" />
     <Content Include="Tomahawk.njsproj" />
     <Compile Include="backend\server.js" />
     <Content Include="frontend\nw.html" />
+    <Compile Include="app.js" />
     <Compile Include="tests\backend_mocha.js" />
     <Compile Include="backend\lib\header.js" />
     <Compile Include="backend\lib\md5.js" />
@@ -57,6 +58,7 @@
     <Folder Include="frontend\css" />
     <Folder Include="frontend\fonts" />
     <Folder Include="frontend\js" />
+    <Folder Include="scratch\" />
     <Folder Include="tests" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
