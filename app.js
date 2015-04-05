@@ -46,7 +46,9 @@ function checkAll() {
     var d=0 //Used for line 59 of getting anime ID
     for (i in list) {
       checkForFolderOrCreate(i, function(folderName) {
-        for (j in list[i]) moveAnime(list[i][j], folderName)
+				for (var j in list[i]) {
+					moveAnime(list[i][j], folderName)
+				}
       })
     }
   })
@@ -57,7 +59,6 @@ function createGroupedDPDA(callback) {
   var groupedDPDA = []
   var i = 0
   dPDA.forEach(function(e) {
-	  console.log(e)
     var animeName = e.slice(15,e.match(/ - \d{2,} \[\d{3,}p].mkv/).index)
     if (! groupedDPDA[animeName]) {
       groupedDPDA[animeName]=dPDA.filter(function (e) {return new RegExp(animeName).test(e)})
@@ -73,7 +74,8 @@ function checkForFolderOrCreate(name, callback) {
   var nameSplit = name.split(' ')
   var nameToCheck = name
   while (! folderName) {
-    var possibleFolderNames = aPDA.filter(function(e) {return RegExp(nameToCheck,'i').test(e)})
+		var possibleFolderNames = aPDA.filter(function (e) { return RegExp(nameToCheck, 'i').test(e) })
+
     switch (possibleFolderNames.length) {
       case 1:
         callback(folderName = possibleFolderNames[0])
@@ -81,9 +83,10 @@ function checkForFolderOrCreate(name, callback) {
       case 0:
       default: 
         if (nameToCheck.match(/ \S*$/)) nameToCheck=nameToCheck.slice(0,nameToCheck.match(/ \S*$/).index)
-        else if (! possibleFolderNames.length) {
+				else if (!possibleFolderNames.length) {
+					folderName = name
           fs.mkdir(animePath+folderName,function () {  //Make the folder and move anime in callback
-            callback(folderName = nameToCheck)
+            callback(folderName)
           })
         }
         else (console.log(folderName = 'Multiple matches to name!'))
@@ -94,7 +97,19 @@ function checkForFolderOrCreate(name, callback) {
 
 //Function to move the files
 function moveAnime(name, folderName) {  //Make the folder and move anime in callback //test one
-  fs.rename(downloadsPath+name, animePath+folderName+'/'+name, function(err){if (err) console.log(err)})
+	fs.rename(downloadsPath + name, animePath + folderName + '/' + name, function (err, data){
+		if (err) {
+			switch (err.errno) {
+				case -4048:
+					console.log(name , 'Already file with that name!');
+					break;
+				case -4082:
+					console.log(name , 'Program has exclusive access to file!');
+					break;
+			}
+		}
+		else console.log(err);
+	})
   // if (++d==++groupedDPDA.length) startGettingAnimeID() //Mark for when making folder is done
 }
 //----------------------------------------
