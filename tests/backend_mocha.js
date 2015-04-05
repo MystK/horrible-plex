@@ -1,7 +1,7 @@
 /**
  * Created by Antoine on 3/15/2015.
  */
-var app = require('../backend/server');
+var app = require('../app.js');
 var request = require('supertest').agent(app.listen());
 var expect = require('chai').expect;
 
