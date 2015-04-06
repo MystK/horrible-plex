@@ -28,4 +28,13 @@ gulp.task('mocha', function() {
 			.on('error', console.log);
 });
 
+gulp.task('scratch', function () {
+	supervisor('scratch/generator scratch.js', {
+		watch: ['scratch/generator scratch.js'],
+		exec: "iojs",
+		debug: true,
+		noRestartOn: "exit"
+	});
+});
+
 gulp.task('default',['mocha', 'watch']);

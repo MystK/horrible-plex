@@ -4,6 +4,7 @@
   "description": "anime utility",
   "main": "/frontend/nw.html",
   "dependencies": {
+    "co": "^4.5.1",
     "koa": "^0.18.1",
     "koa-router": "^4.2.0",
     "nw": "^0.12.0"

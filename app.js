@@ -106,9 +106,10 @@ function moveAnime(name, folderName) {  //Make the folder and move anime in call
 				case -4082:
 					console.log(name , 'Program has exclusive access to file!');
 					break;
+				default:
+					console.log(err);
 			}
 		}
-		else console.log(err);
 	})
   // if (++d==++groupedDPDA.length) startGettingAnimeID() //Mark for when making folder is done
 }

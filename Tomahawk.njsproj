@@ -6,13 +6,16 @@
     <ProjectGuid>{0773d4ab-eabd-46a9-b034-d05850bb0e37}</ProjectGuid>
     <ProjectHome />
     <ProjectView>ShowAllFiles</ProjectView>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>scratch\generator scratch.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <StartWebBrowser>False</StartWebBrowser>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -20,7 +23,7 @@
     <Content Include=".gitignore" />
     <Compile Include="gulpfile.js" />
     <Content Include="package.json" />
-    <Compile Include="scratch\scratchpad.js" />
+    <Compile Include="scratch\hash scratch.js" />
     <Content Include="Tomahawk.njsproj" />
     <Compile Include="backend\server.js" />
     <Content Include="frontend\nw.html" />
@@ -61,6 +64,9 @@
     <Folder Include="frontend\js" />
     <Folder Include="scratch\" />
     <Folder Include="tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scratch\generator scratch.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
