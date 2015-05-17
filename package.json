@@ -3,13 +3,7 @@
   "version": "1.0.0",
   "description": "anime utility",
   "main": "/frontend/nw.html",
-  "dependencies": {
-    "co": "^4.5.1",
-    "koa": "^0.18.1",
-    "koa-router": "^4.2.0",
-    "nw": "^0.12.0",
-    "standard": "^3.7.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-livereload": "^3.8.0",

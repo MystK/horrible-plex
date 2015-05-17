@@ -11,7 +11,7 @@ router
 	.get('/',
 		function *(next) {
 		}
-	)1
+	)
 	.get('/media',
 		function* (next) {
 		}
