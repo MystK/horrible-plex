@@ -11,17 +11,13 @@
     "standard": "^3.7.2"
   },
   "devDependencies": {
-    "chai": "^2.1.1",
     "gulp": "^3.8.11",
     "gulp-livereload": "^3.8.0",
     "gulp-mocha": "^2.0.0",
     "gulp-supervisor": "^0.1.2",
-    "mocha": "^2.2.1",
-    "supertest": "^0.15.0",
     "supervisor": "^0.6.0"
   },
   "scripts": {
-    "test": "standard",
     "start": "nw",
     "backend": "backend/server"
   },
