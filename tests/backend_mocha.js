@@ -1,3 +1,4 @@
+/// <reference path="../typings/mocha/mocha.d.ts"/>
 /**
  * Created by Antoine on 3/15/2015.
  */
