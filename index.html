@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <a href='#'>
+          test
+        </a>
+      </ul>
+    </header>
+    <h1>Hello World!</h1>
+    We are using io.js <script>document.write(process.version)</script>
+    and Electron <script>document.write(process.versions['electron'])</script>.
+    <script>
+      "use strict";
+      var ipc = require('ipc');
+      document.querySelector('a').addEventListener('click', function(){
+        ipc.send('asynchronous-message', 'ping');
+      })
+      
+      ipc.on('asynchronous-reply', function(arg) {
+        console.log(arg); // prints "pong"
+      });
+    </script>
+  </body>
+</html>

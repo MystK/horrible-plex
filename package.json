@@ -2,9 +2,10 @@
   "name": "Tomahawk",
   "version": "1.0.0",
   "description": "anime utility",
-  "main": "/frontend/nw.html",
+  "main": "main.js",
   "dependencies": {},
   "devDependencies": {
+    "electron-prebuilt": "^0.26.0",
     "gulp": "^3.8.11",
     "gulp-livereload": "^3.8.0",
     "gulp-mocha": "^2.0.0",
@@ -12,7 +13,6 @@
     "supervisor": "^0.6.0"
   },
   "scripts": {
-    "start": "nw",
     "backend": "backend/server"
   },
   "window": {
