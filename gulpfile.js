@@ -1,4 +1,5 @@
 // gulpfile.js
+//supervisor -i ./ -x C:\Users\its\AppData\Roaming\npm\electron.cmd ./
 var gulp = require('gulp')
 var livereload = require('gulp-livereload')
 var supervisor = require('gulp-supervisor')
