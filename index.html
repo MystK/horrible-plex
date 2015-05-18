@@ -12,8 +12,7 @@
       </ul>
     </header>
     <h1>Hello World!</h1>
-    We are using io.js <script>document.write(process.version)</script>
-    and Electron <script>document.write(process.versions['electron'])</script>.
+    <div class='data'></div>
     <script>
       "use strict";
       var ipc = require('ipc');
@@ -23,6 +22,7 @@
       
       ipc.on('asynchronous-reply', function(arg) {
         console.log(arg); // prints "pong"
+        document.getElementsByClassName('data') = arg
       });
     </script>
   </body>
