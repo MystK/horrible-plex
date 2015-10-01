@@ -1,4 +1,4 @@
-# aniPlex
+# Horrible Plex
 Autodownload and rename anime torrent files from HorribleSubs for use in Plex
 
 You can currently use this in conjunction with uTorrent.
