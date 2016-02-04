@@ -1,7 +1,7 @@
 /// <reference path="typings/node/node.d.ts"/>
 var fs = require('fs')
 var animePath = 'D:\\Media\\Anime\\'
-var downloadsPath = 'D:\\Downloads\\BooStudioLLC.TorrexPro_b6e429xa66pga!App\\Downloads\\Completed\\'
+var downloadsPath = 'D:\\Downloads\\Torrents\\Completed\\'
 var dPDA = fs.readdirSync(downloadsPath).filter(function (e) {
   return /\[HorribleSubs\].*\]\.mkv/.test(e)
 })
@@ -18,7 +18,6 @@ process.argv[2]? process.argv[2].match(/ - \d{2,} \[\d{3,}p].mkv/)?
   : dPDA.length != 0? // DO NOTHING
     checkAll() // DO ALL
     : console.log('No new files')
-
 // Move just one anime file
 function checkOne (fileName) {
   var animeName = fileName.slice(15, fileName.match(/ - \d{2,} \[\d{3,}p].mkv/).index)
@@ -30,6 +29,8 @@ function checkOne (fileName) {
 
 // Move all anime files
 function checkAll () {
+  console.log('DEPRECATING FOR NOW')
+  process.exit()
   createGroupedDPDA(function (list) {
     // Now check if folder is already made and make if not.
     var d = 0 // Used for line 59 of getting anime ID
