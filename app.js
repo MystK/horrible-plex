@@ -78,8 +78,7 @@ function checkForFolderOrCreate (name, callback) {
           fs.mkdir(animePath + folderName , function () {  // Make the folder and move anime in callback
             callback(folderName)
           })
-        }
-        else (console.log(folderName = 'Multiple matches to name!'))
+        } else console.log(folderName = 'Multiple matches to name!')
     }
   }
 }
