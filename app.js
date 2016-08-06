@@ -1,4 +1,3 @@
-/// <reference path="typings/node/node.d.ts"/>
 var fs = require('fs')
 var animePath = 'D:\\Media\\Anime\\'
 var downloadsPath = 'D:\\Downloads\\Torrents\\Completed\\'
